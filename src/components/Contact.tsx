@@ -13,7 +13,7 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/abd-ur-rehman-67aa302a9/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-cursor="disable"
               >
                 LinkedIn — Abd-Ur-Rehman
@@ -30,7 +30,7 @@ const Contact = () => {
             <a
               href="https://github.com/7AbdUrRehman7"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -39,7 +39,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/abd-ur-rehman-67aa302a9/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -48,7 +48,7 @@ const Contact = () => {
             <a
               href="https://www.instagram.com/abdurrehman.7_/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
