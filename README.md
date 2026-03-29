@@ -1,10 +1,6 @@
 # 3D Portfolio Website
 
-This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
-
-Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.app/)
-
-![Portfolio Preview](public/images/preview1.png)
+This repository contains the source code for my personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
 
 ## Table of Contents
 
@@ -17,6 +13,7 @@ Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.
 - [Customization Guide](#customization-guide)
 - [Troubleshooting](#troubleshooting)
 - [Deployment](#deployment)
+- [Credits](#credits)
 - [License](#license)
 
 ## Features
@@ -25,6 +22,7 @@ Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.
 - 3D character scene rendering powered by React Three Fiber and Three.js.
 - GSAP-powered animations and transitions for interactive storytelling.
 - Custom cursor, hover interactions, and scroll-driven visual effects.
+- Interactive 3D tech stack spheres with physics-based collisions.
 - Organized component architecture with dedicated utilities and style modules.
 
 ## Tech Stack
@@ -49,10 +47,8 @@ Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.
 
 - `react-icons`
 - `react-fast-marquee`
-- `@vercel/analytics`
 
 ## Project Structure
-
 ```text
 .
 ├── public/                    # Static assets
@@ -88,23 +84,20 @@ Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.
 ### Installation
 
 1. Clone the repository:
-
-   ```bash
-   git clone <your-repository-url>
-   cd 3d-portfolio
-   ```
+```bash
+   git clone https://github.com/7AbdUrRehman7/My-3DPortfolio.git
+   cd My-3DPortfolio
+```
 
 2. Install dependencies:
-
-   ```bash
+```bash
    npm install
-   ```
+```
 
 3. Start the local development server:
-
-   ```bash
+```bash
    npm run dev
-   ```
+```
 
 4. Open the URL shown in the terminal (typically `http://localhost:5173`).
 
@@ -158,18 +151,20 @@ You can adapt this portfolio to your own profile by updating the following areas
 ## Deployment
 
 1. Create a production build:
-
-   ```bash
+```bash
    npm run build
-   ```
+```
 
 2. Validate locally:
-
-   ```bash
+```bash
    npm run preview
-   ```
+```
 
 3. Deploy the generated `dist/` folder to your hosting provider (for example Vercel, Netlify, or Cloudflare Pages).
+
+## Credits
+
+Original template by [Akash Malhotra](https://github.com/akashrmalhotra/3d-portfolio). Customized with my own content, experience, and projects.
 
 ## License
 
