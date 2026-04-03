@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
@@ -30,6 +30,13 @@ const projects = [
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  }, [currentIndex]);
 
   const goToSlide = useCallback(
     (index: number) => {
@@ -81,12 +88,7 @@ const Work = () => {
 
           {/* Slides */}
           <div className="carousel-track-container">
-            <div
-              className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
+            <div className="carousel-track" ref={trackRef}>
               {projects.map((project, index) => (
                 <div className="carousel-slide" key={index}>
                   <div className="carousel-content">
