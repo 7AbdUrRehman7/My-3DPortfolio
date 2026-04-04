@@ -5,25 +5,84 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
+    title: "Telecom Support Agent",
+    category: "Multi-Agent AI Troubleshooting System",
+    tools: "LangGraph, FastAPI, React, MCP Servers, ChromaDB, Redis, Docker, OpenShift",
+    image: "/images/placeholder.webp",
+    link: "#",
+    demoLink: "",
+  },
+  {
+    title: "AI Financial Agent",
+    category: "Workflow Automation & AI Orchestration",
+    tools: "n8n, JavaScript, LLMs, OAuth 2.0, REST APIs",
+    image: "/images/placeholder.webp",
+    link: "#",
+    demoLink: "",
+  },
+  {
     title: "AI Finance Dashboard",
     category: "Full-Stack AI Application",
     tools: "TypeScript, Next.js, MongoDB, LLM-Assisted Categorization",
     image: "/images/placeholder.webp",
-    link: "#",
+    link: "https://github.com/7AbdUrRehman7/AI-finance-dashboard",
+    demoLink: "",
   },
   {
     title: "PlanetZe",
     category: "Carbon Footprint Tracking Android App",
     tools: "Java, Android Studio, Firebase Realtime Database",
     image: "/images/placeholder.webp",
-    link: "#",
+    link: "https://github.com/shamrita11/Planetze_B07",
+    demoLink: "https://www.youtube.com/watch?v=P-J9M93AbB4",
   },
   {
     title: "Linux FD Table Monitor",
     category: "Systems Programming Tool",
     tools: "C, Linux /proc, Bash, Binary Serialization",
     image: "/images/placeholder.webp",
-    link: "#",
+    link: "https://github.com/7AbdUrRehman7/Linux-System-Wide-FD-Table-Monitor",
+    demoLink: "",
+  },
+  {
+    title: "Allumino",
+    category: "AI-Powered STEM Talent Platform - Hack the Valley X",
+    tools: "JavaScript, AI/ML, Career Matching",
+    image: "/images/placeholder.webp",
+    link: "https://github.com/Beyonder0CRt/Allumino-HTW-MVP",
+    demoLink: "",
+  },
+  {
+    title: "MIPS Platformer",
+    category: "Platform Game in Assembly",
+    tools: "MIPS Assembly, MARS Simulator, Bitmap Display",
+    image: "/images/placeholder.webp",
+    link: "https://github.com/7AbdUrRehman7/Assembly-GAME",
+    demoLink: "https://play.library.utoronto.ca/watch/23423fcb1f1ee4b34b22ec09feaac13c",
+  },
+  {
+    title: "The Slide Game",
+    category: "Text-Based Puzzle Game",
+    tools: "Python",
+    image: "",
+    link: "https://github.com/7AbdUrRehman7/The-Slide-GAME",
+    demoLink: "",
+  },
+  {
+    title: "Guess the Phrase",
+    category: "Word-Guessing Game with AI Opponent",
+    tools: "Python, Solo/Multiplayer/AI Modes",
+    image: "",
+    link: "https://github.com/7AbdUrRehman7/Guess-The-Phrase-GAME",
+    demoLink: "",
+  },
+  {
+    title: "Task Manager",
+    category: "Full-Stack Web Application",
+    tools: "Node.js, Express, SQLite, Vanilla JavaScript",
+    image: "/images/placeholder.webp",
+    link: "https://github.com/7AbdUrRehman7/Full-Stack-Task-Manager-App",
+    demoLink: "",
   },
 ];
 
@@ -68,7 +127,6 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -86,7 +144,6 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          {/* Slides */}
           <div className="carousel-track-container">
             <div className="carousel-track" ref={trackRef}>
               {projects.map((project, index) => (
@@ -94,7 +151,7 @@ const Work = () => {
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
-                        <h3>0{index + 1}</h3>
+                        <h3>{String(index + 1).padStart(2, "0")}</h3>
                       </div>
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
@@ -112,6 +169,7 @@ const Work = () => {
                         image={project.image}
                         alt={project.title}
                         link={project.link}
+                        demoLink={project.demoLink}
                       />
                     </div>
                   </div>
@@ -120,13 +178,11 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""}`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"

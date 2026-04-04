@@ -11,7 +11,7 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
-                href="https://www.linkedin.com/in/abd-ur-rehman-67aa302a9/"
+                href="https://www.linkedin.com/in/7abdurrehman/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="disable"
@@ -37,7 +37,7 @@ const Contact = () => {
               GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/abd-ur-rehman-67aa302a9/"
+              href="https://www.linkedin.com/in/7abdurrehman/"
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="disable"

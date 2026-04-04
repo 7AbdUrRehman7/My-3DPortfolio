@@ -1,45 +1,47 @@
-import { useState } from "react";
-import { MdArrowOutward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
+import { MdPlayCircleOutline } from "react-icons/md";
 
 interface Props {
-  image: string;
+  image?: string;
   alt?: string;
-  video?: string;
   link?: string;
+  demoLink?: string;
 }
 
 const WorkImage = (props: Props) => {
-  const [isVideo, setIsVideo] = useState(false);
-  const [video, setVideo] = useState("");
-  const handleMouseEnter = async () => {
-    if (props.video) {
-      setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
-    }
-  };
+  const hasRealLink = props.link && props.link !== "#";
+  const hasImage = props.image && props.image !== "";
+
+  const Tag = hasRealLink ? "a" : "div";
+  const linkProps = hasRealLink
+    ? { href: props.link, target: "_blank", rel: "noopener noreferrer" }
+    : {};
 
   return (
-    <div className="work-image">
-      <a
+    <div className={`work-image ${!hasImage ? "work-image-noimg" : ""}`}>
+      <Tag
         className="work-image-in"
-        href={props.link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsVideo(false)}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...linkProps}
         data-cursor="disable"
       >
-        {props.link && (
+        {hasRealLink && (
           <div className="work-link">
-            <MdArrowOutward />
+            <FaGithub />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
-      </a>
+        {hasImage && <img src={props.image} alt={props.alt} />}
+      </Tag>
+      {props.demoLink && props.demoLink !== "" && (
+        <a
+          className="work-demo-link"
+          href={props.demoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-cursor="disable"
+        >
+          <MdPlayCircleOutline />
+        </a>
+      )}
     </div>
   );
 };
