@@ -254,6 +254,38 @@
   opacity: 1;
 }
 
+/* ── Image Arrows (multi-image per project) ── */
+.img-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.2rem;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.img-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 1);
+}
+
+.img-arrow-left {
+  left: 15px;
+}
+
+.img-arrow-right {
+  right: 15px;
+}
+
 /* ── Demo video link ── */
 .work-demo-link {
   position: absolute;

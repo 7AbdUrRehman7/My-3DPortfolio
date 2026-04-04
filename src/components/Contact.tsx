@@ -16,13 +16,13 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 data-cursor="disable"
               >
-                LinkedIn — Abd-Ur-Rehman
+                LinkedIn (Abd-Ur-Rehman)
               </a>
             </p>
             <h4>Education</h4>
             <p>
               B.Sc. Computer Science Specialist (Co-op), University of Toronto
-              — 2022 - Present
+              — (2022 - Present)
             </p>
           </div>
           <div className="contact-box">
